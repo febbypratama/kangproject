@@ -19,26 +19,11 @@ from telethon.tl.types import InputStickerSetID
 from telethon.tl.types import DocumentAttributeSticker
 
 KANGING_STR = [
-    "Eh... Koq bagus... aku curry ahhh :3",
-    "Aku curry ya kakak :)",
-    "Curry Sticker dulu yee kan",
-    "ehh, mantep nih.....aku ambil ya kaga",
-    "Bagus eaaaa....\nAmbil ahh....",
-    "Ini Sticker aku ambil yaa\nDUARR!",
-    "leh ugha ni Sticker\nCurry ahh~",
-    "Pim Pim Pom!!!\nni Sticker punya aing sekarang hehe",
-    "Bentar boss, ane curry dulu",
-    "Ihh, bagus nih\nCurry ahh~",
-    "Curry lagi yee kan.....",
-    "CURRY TROSS!!!",
-	"Bolehkah saya curry ni sticker\nau ah curry aja hehe",
-	"Curry Sticker ahh.....",
-	"Curry dolo boss",
-	"Swiper jangan mencurry",
-]
+    "Ter-curi",
+   ]
 
 
-@register(outgoing=True, pattern="^\.curry")
+@register(outgoing=True, pattern="^\.curi")
 async def kang(args):
     """ For .kang command, kangs stickers or creates new ones. """
     user = await bot.get_me()
@@ -243,8 +228,8 @@ async def kang(args):
                 # Ensure user doesn't get spamming notifications
                 await bot.send_read_acknowledge(conv.chat_id)
 
-        await args.edit(f"Curry Success!\
-            \n[Klik Disini!](t.me/addstickers/{packname})",
+        await args.edit(f"\
+            [HASIL CURIAN DISINI COK!](t.me/addstickers/{packname})",
                         parse_mode='md')
 
 
