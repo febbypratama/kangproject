@@ -17,11 +17,11 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 UNAPPROVED_MSG = (
-    "`I haven't approved you to PM yet.\n`"
-    "`wait for me to approve your PM.\n`"
-    "`Until then, don't spam My PM or you'll get blocked...\n`"
-    "`CAPICHE?\n\n`"
-    "`-Userbot`")
+    "`Maaf sebelumnya Illumi belum mengijinkanmu untuk PM.\n`"
+    "`Tunggu Illumi untuk mengijinkanmu untuk PM.\n`"
+    "`Jangan SPAM agar tidak ter-block!\n`"
+    "`Thanks!\n\n`"
+    "`-Illumi's Bot`")
 # =================================================================
 
 
