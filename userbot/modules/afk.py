@@ -72,7 +72,7 @@ async def type_afk_is_not_true(notafk):
     afk_end = back_alive.replace(microsecond=0)
     if ISAFK:
         ISAFK = False
-        msg = await notafk.edit("**My Lord back from Hell!")
+        msg = await notafk.edit("**My Lord back from Hell!**")
         time.sleep(3)
         await msg.delete()
         if BOTLOG:
