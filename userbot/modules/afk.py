@@ -72,7 +72,7 @@ async def type_afk_is_not_true(notafk):
     afk_end = back_alive.replace(microsecond=0)
     if ISAFK:
         ISAFK = False
-        msg = await notafk.edit("**I'm Back! Hell Was Boring**")
+        msg = await notafk.edit("**My Lord back from Hell!")
         time.sleep(3)
         await msg.delete()
         if BOTLOG:
@@ -138,21 +138,21 @@ async def mention_afk(mention):
                 afk_since = f"`{int(seconds)}s` ago"
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply(f"**I'm not available right now.** (Since **{afk_since}**).\
+                    await mention.reply(f"**My Lord still not available,wait until My Lord replied ur message** (Since **{afk_since}**).\
                         \nReason: `{AFKREASON}`")
                 else:
-                    await mention.reply(f"**I'm not available right now.** (Since **{afk_since}**).\
-                        \n**Please come back later**")
+                    await mention.reply(f"**Sorry My Lord not available right now.** (Since **{afk_since}**).\
+                        \n**He will reply ur message later!**")
                 USERS.update({mention.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
             elif mention.sender_id in USERS:
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await mention.reply(f"**I'm still not available right now.** (Since **{afk_since}**).\
+                        await mention.reply(f"**My Lord still not available,wait until My Lord replied ur message.** (Since **{afk_since}**).\
                             \nReason: `{AFKREASON}`")
                     else:
-                        await mention.reply(f"**I'm not available right now.** (Since **{afk_since}**).\
-                        \n**Please come back later**")
+                        await mention.reply(f"**Sorry My Lord not available right now.** (Since **{afk_since}**).\
+                        \n**He will reply ur message later**")
                     USERS[mention.sender_id] = USERS[mention.sender_id] + 1
                     COUNT_MSG = COUNT_MSG + 1
                 else:
